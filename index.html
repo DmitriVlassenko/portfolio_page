@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="CSS/lightbox.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<!--Header-->
+<header class="header" id="welcome">
+    <div class="container">
+        <div class="header__inner">
+        <div class="user">
+            <div class="user__avatar">
+                <a href="images/DimiLightLogo.jpg" data-lightbox="image">
+                <img class="avatar" src="images/DimiLightLogo.jpg" height="60px" alt="LogoImage">
+                </a>
+            </div>
+            <div class="user__content">
+                <div class="user__name">Dmitri <br> Vlassenko</div>
+                <div class="user__prof">Front-End Developer</div>
+            </div>
+        </div>
+
+        <nav class="nav" id="nav">
+            <a class="nav__link" href="#works">work</a>
+            <a class="nav__link" href="#aboutMe">about me</a>
+            <a class="nav__link" href="#blog">blog</a>
+            <a class="nav__link nav__link--btn" href="#" data-modal="#modal_contact">hire me</a>
+        </nav>
+
+            <button class="burger" type="button" id="navToggle">
+                <img class="burger__icon" src="images/burget.svg" alt="">
+            </button>
+        </div>
+    </div>
+</header>
+
+<!--Intro-->
+<section class="intro">
+    <div class="container">
+
+        <div class="intro__inner">
+            <div class="intro__content">
+                <h2 class="intro__subtitle">Hello I'm</h2>
+                <h1 class="intro__title">Dmitri Vlassenko</h1>
+                <div class="intro__text">Software Developer looking for opportunities</div>
+
+                <div class="social">
+                    <a href="https://www.instagram.com/dmitrivlassenko/" target="_blank" class="social__link">
+                        <img src="images/insta.svg" alt="">
+                    </a>
+                    <a href="https://twitter.com/DmitriVlassenko" target="_blank" class="social__link">
+                        <img src="images/twitter.svg" alt="">
+                    </a>
+                    <a href="https://github.com/DmitriVlassenko" target="_blank" class="social__link">
+                        <img src="images/github.svg" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/in/dmitri-vlassenko-1103461a4/" target="_blank" class="social__link">
+                        <img src="images/linkedin.svg" alt="">
+                    </a>
+                    <a href="https://www.facebook.com/dmitri.vlassenko/" target="_blank" class="social__link">
+                        <img src="images/facebook.svg" alt="">
+                    </a>
+                </div>
+
+<!--                Extra button-->
+<!--                <a class="btn" href="#" data-modal="#modal_contact">HIRE ME</a>-->
+                <a class="btn" href="#" data-modal="#modal_resume">SEE MY RESUME</a>
+
+            </div>
+            <picture>
+                <source srcset="images/MainPicture.webp" type="image/webp">
+                <img class="intro__photo" src="images/MainPicture.png" alt="">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<!--Works-->
+
+<div class="works" id="works">
+    <div class="container">
+
+        <div class="works__nav">
+            <a class="works__nav-link" href="#" data-filter="all">All</a>
+            <a class="works__nav-link" href="#" data-filter="app">Code</a>
+            <a class="works__nav-link" href="#" data-filter="website">Websites</a>
+<!--            Extra Section for later use-->
+<!--            <a class="works__nav-link" href="#" data-filter="interaction">Other</a>-->
+        </div>
+
+        <div class="portfolio">
+            <div class="portfolio__col" data-cat="app">
+                <div class="work" data-modal="#modal_project_1">
+                    <div id="libft">
+                    <img class="work__image" src="images/libft.png" alt="C_functions">
+                    </div>
+                    <div class="work-content">
+                    <div class="work__cat">Category: Code </div>
+                    <div class="work__title">C functions
+                    <time class="work__date" datetime="2020-03-01 19:00">2020</time>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio__col" data-cat="app">
+                <div class="work" data-modal="#modal_project_2">
+                    <img class="work__image" src="images/tetris.svg" alt="">
+                    <div class="work-content">
+                        <div class="work__cat">Category: Code</div>
+                        <div class="work__title">Recursion
+                            <time class="work__date" datetime="2020-05-22 12:00">2020</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio__col" data-cat="website">
+                <div class="work" data-modal="#modal_project_3">
+                    <picture>
+                        <source srcset="images/myWeb.webp" type="image/webp">
+                        <img class="work__image" src="images/myWeb.png" alt="">
+                    </picture>
+                    <div class="work-content">
+                        <div class="work__cat">Category: Website</div>
+                        <div class="work__title">Portfolio page
+                            <time class="work__date" datetime="2021-01-26 18:00">2021</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            Section for future updates-->
+<!--            <div class="portfolio__col" data-cat="interaction">-->
+<!--                <div class="work">-->
+<!--                    <img class="work__image" src="https://placehold.it/370x300" alt="">-->
+<!--                    <div class="work-content">-->
+<!--                        <div class="work__cat">Category: interaction</div>-->
+<!--                        <div class="work__title">Project title-->
+<!--                            <time class="work__date" datetime="2020-11-22 19:00">2020</time>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--Button-->
+<!--        <div class="text-center">-->
+<!--        <a class="btn btn&#45;&#45;sm" href="#">LOAD MORE WORK</a>-->
+<!--        </div>-->
+
+    </div>
+</div>
+
+<!--About-->
+<section class="about">
+    <div class="container">
+
+        <div class="about__inner">
+            <div class="about__photo">
+                <img class="img" id="aboutMe" src="images/aboutMe.png" alt="">
+            </div>
+            <div class="about__content">
+                <h3 class="about__title">ABOUT ME</h3>
+                <h2 class="about__bigtitle">I'm available</h2>
+                <div class="about__text">
+                    <p>Hello,<br>Here is a short story about me.</p>
+                    <p>I was working as a chef for many years, but I have always been dreaming of being a developer. Last year was challenging for us all, but it also provided lots of new opportunities. I was lucky to become a student of Hive University of programming.
+                    I learned a lot during this year but I still have lot to learn in the future. I'm improving my knowledge and skills every day and hope that
+                    my developing skill set will meet the markets needs. Currently I'm searching for my first real job in the industry to start my career as a developer. Please don't hesitate to contact me!</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Reviews-->
+<div class="reviews">
+    <div class="container">
+
+        <div class="reviews__item">
+            <div class="reviews__text">
+                <p>“Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.
+                    And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking.<br>
+                    Don’t settle. As with all matters of the heart, you’ll know when you find it.”</p>
+            </div>
+
+            <div class="reviews__author">
+                    <img class="reviews__photo" src="images/Steve-Jobs.jpg" alt="">
+                <div class="reviews__name">Steve Jobs</div>
+
+<!--                Hope later I will have some reviews-->
+<!--                <div class="reviews__company">......</div>-->
+<!--                <div class="reviews__rating">-->
+<!--                    <img class="reviews__star" src="images/star.svg" width="13" height="13" alt="">-->
+<!--                    <img class="reviews__star reviews__star&#45;&#45;unactive" src="images/star.svg" width="13" height="13" alt="">-->
+<!--                </div>-->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--News-->
+
+<section class="news" id="blog">
+    <div class="container">
+        <div class="news__header">
+            <h3 class="news__title">Learning goals</h3>
+            <div class="news__text">Things that I aspire to master</div>
+        </div>
+
+        <div class="articles">
+            <div class="articles__col">
+                <div class="articles__item">
+                    <div class="articles__header">
+                        <time class="articles__date">in<br>progress</time>
+                        <a href="https://www.freecodecamp.org/learn/" target="_blank">
+                            <img class="articles__photo" src="images/javascript.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="articles__content">
+                        <h4 class="articles__title"><a href="https://www.freecodecamp.org/learn/" target="_blank">JavaScript</a></h4>
+                        <div class="articles__cat">category: code</div>
+                        <div class="articles__text">
+                            <p>Currently, I'm learning JS and I'm enjoying it a lot.<br>
+                            As any learning process, sometimes JS makes me feel frustrated, but it's very satisfying when you solve a problem you have been struggling with.</p>
+                            <p>Sources: FreeCodeCamp, Youtube, Google</p>
+                        </div>
+                    </div>
+                    <a class="btn  btn--sm" href="https://www.freecodecamp.org/learn/" target="_blank">FreeCodeCamp link</a>
+                </div>
+            </div>
+
+
+            <div class="articles__col">
+                <div class="articles__item">
+                <div class="articles__header">
+                    <time class="articles__date">in<br>progress</time>
+                    <a href="https://reactjs.org/tutorial/tutorial.html" target="_blank">
+                        <img class="articles__photo" src="images/react.svg" alt="">
+                    </a>
+                </div>
+                <div class="articles__content">
+                    <h4 class="articles__title"><a href="https://reactjs.org/tutorial/tutorial.html" target="_blank">React</a></h4>
+                    <div class="articles__cat">category: web framework</div>
+                    <div class="articles__text">
+                        <p>React is a very interesting and powerful tool. I like the possibilities that it's giving. At the moment, React is my main focus.</p>
+                        <br>
+                        <p>Sources: reactjs.org, Youtube, Google</p>
+                    </div>
+                </div>
+                <a class="btn  btn--sm" href="https://reactjs.org/tutorial/tutorial.html" target="_blank">Creators tutorial</a>
+            </div></div>
+
+
+            <div class="articles__col">
+                <div class="articles__item">
+                <div class="articles__header">
+                    <time class="articles__date">in<br>progress</time>
+                    <a href="https://www.python.org/" target="_blank">
+                        <img class="articles__photo" src="images/python.svg" alt="">
+                    </a>
+                </div>
+                <div class="articles__content">
+                    <h4 class="articles__title"><a href="https://www.python.org/" target="_blank">Python</a></h4>
+                    <div class="articles__cat">category</div>
+                    <div class="articles__text">
+                        <p>Python is everywhere. I like that it's improving developers productivity, because time is most valuable thing we have.
+                        <br>I would like to master it at some point.</p>
+                        <br>
+                        <p>Sources: python.org, Youtube, Google</p>
+                    </div>
+                </div>
+                <a class="btn  btn--sm" href="https://www.python.org/" target="_blank">official website</a>
+            </div></div>
+        </div>
+
+<!--        No need at the moment-->
+<!--        <div class="news__footer">-->
+<!--            <a class="news__link" href="#">See more posts</a>-->
+<!--        </div>-->
+
+    </div>
+</section>
+
+<!--Footer-->
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer_inner">
+            <div class="footer__credits">
+                <div class="footer__copyright">
+                    &copy; 2021 Dmitri Vlassenko
+                </div>
+                    <div class="footer__social">
+                        <a href="https://www.instagram.com/dmitrivlassenko/" target="_blank">
+                            <img src="images/insta-gray.svg" width="24" alt="">
+                        </a>
+                        <a href="https://twitter.com/DmitriVlassenko" target="_blank">
+                            <img src="images/twitter-gray.svg" width="24" alt="">
+                        </a>
+                        <a href="https://github.com/DmitriVlassenko" target="_blank">
+                            <img src="images/github-gray.svg" width="24" alt="">
+                        </a>
+                        <a href="https://www.linkedin.com/in/dmitri-vlassenko-1103461a4/" target="_blank">
+                            <img src="images/linkedin-gray.svg" width="24" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/dmitri.vlassenko" target="_blank">
+                            <img src="images/facebook-gray.svg" width="24" alt="">
+                        </a>
+                    </div>
+            </div>
+            <nav class="footer__nav">
+                <a class="footer__nav-link" href="#works">Work</a>
+                <a class="footer__nav-link" href="#aboutMe">About me</a>
+                <a class="footer__nav-link" href="#blog">Blog</a>
+                <a class="footer__nav-link" href="#" data-modal="#modal_resume">Resume</a>
+                <a class="footer__nav-link footer__nav-link--btn" href="#" data-modal="#modal_contact">Hire me</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+
+<!--Modals-->
+
+<!--Project_1-->
+<div class="text-center">
+
+<div class="modal" id="modal_project_1">
+    <div class="gallery">
+    <div class="modal__dialog">
+
+        <button class="modal__close" type="button" data-close>
+            <img src="images/cancel.svg" alt="Close">
+        </button>
+
+        <div class="modal-work">
+
+            <div class="modal-work__content">
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">Libft</h3>
+                    <div class="modal-work__info">category: code <span class="modal-work__info-divider">|</span> 2020</div>
+                </div>
+
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Goal:</div>
+                    <div class="modal-work__client-company">Implement functions from libft library</div>
+                </div>
+
+                <div class="modal-work__text">
+                    <p>Learning algorithms and computer logic by implementing functions such as: atoi, putnbr, strcmp.<br>
+                    Helps a lot in understading computer logic, memory allocation process and much more.</p>
+                    <a class="nav__link link" target="_blank" href="https://github.com/DmitriVlassenko/libft">Github link</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <div class="shadow__box"></div>
+        <a href="images/lib_preview.png" data-lightbox="images-1">
+            <img class="modal-work__photo" src="images/lib_preview.png" height="250px" alt="">
+        </a>
+        <a href="images/atoi_preview.png" data-lightbox="images-1">
+            <img class="modal-work__photo" src="images/atoi_preview.png" height="250px" alt="">
+        </a>
+    </div>
+</div>
+</div>
+
+<!--Project_2-->
+<div class="text-center">
+
+<div class="modal" id="modal_project_2">
+    <div class="gallery">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/cancel.svg" alt="Close">
+            </button>
+
+            <div class="modal-work">
+
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Fillit</h3>
+                        <div class="modal-work__info">category: code <span class="modal-work__info-divider">|</span> 2020</div>
+                    </div>
+
+                    <div class="modal-work__client">
+                        <div class="modal-work__client-title">Goal:</div>
+                        <div class="modal-work__client-company">Searching the optimal solution</div>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Fillit is a project that lets you discover and/or familiarize yourself with a recurring problem in programming: searching the optimal solution among a huge set of possibilities, in a reasonable time. In this particular project, you will have to find a way to assemble a given Tetriminos set altogether in the smallest possible square.<br>
+
+                            Your program will take a file as parameter, which contains a list of Tetriminos, and arrange them in order to create the smallest square possible. <br>The main goal is to find the smallest square in the shortest amount of time.<br>
+
+                            A Tetriminos is a 4-blocks geometric figure you probably already heard of, thanks to the popular game Tetris.<br>
+
+                            Your executable must take only one parameter, a file which contains a list of Tetriminos to assemble (called tetramino.txt as example in project folder).<br>
+
+                            How to use:<br>
+
+                            1. make<br>
+                            2. ./fillit tetramino.txt</p>
+                        <a class="nav__link link" target="_blank" href="https://github.com/DmitriVlassenko/fillit">Github link</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="shadow__box"></div>
+        <a href="images/tetra_1.png" data-lightbox="images-2">
+            <img class="modal-work__photo" src="images/tetra_1.png" height="250px" alt="">
+        </a>
+        <a href="images/tetra_2.png" data-lightbox="images-2">
+            <img class="modal-work__photo" src="images/tetra_2.png" height="250px" alt="">
+        </a>
+    </div>
+</div>
+</div>
+
+<!--Project_3-->
+
+<div class="modal" id="modal_project_3">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/cancel.svg" alt="Close">
+            </button>
+
+            <div class="modal-work">
+
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Portfolio page</h3>
+                        <div class="modal-work__info">category: Website <span class="modal-work__info-divider">|</span> 2021</div>
+                    </div>
+
+                    <div class="modal-work__client">
+                        <div class="modal-work__client-title">Goal:</div>
+                        <div class="modal-work__client-company">It's nice to have personal space</div>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Technologies used to make it:<br>
+                        HTML<br>CSS<br>JavaScript<br>LESS<br>JQuery<br>Node.js</p>
+                        <a class="nav__link  link" target="_blank" href="#welcome">Welcome</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
+
+<!--RESUME-->
+<div class="modal" id="modal_resume">
+    <div class="modal__dialog">
+
+        <button class="modal__close" type="button" data-close>
+            <img src="images/cancel.svg" alt="Close">
+        </button>
+
+        <div class="modal__content">
+            <h3 class="modal__title  text-center">RESUME</h3>
+
+            <div class="timeline">
+                <div class="timeline__col timeline__col--left">
+                    <h4 class="timeline__title">Experience</h4>
+
+                    <div class="timeline__item">
+                        <time class="timeline__date">2020 - <b>Present</b></time>
+                        <h5 class="timeline__subtitle">Programmer</h5>
+                        <div class="timeline__position">Student</div>
+                        <div class="timeline__text">
+                            <p>I learned at Hive:<br>C language, Git, VirtualBox,<br>Debian(System and Network administration), Shell</p>
+                    </div>
+                    <br>
+                    <div class="timeline__item">
+                        <time class="timeline__date">2020 - <b>Present</b></time>
+                        <h5 class="timeline__subtitle">Self-studies</h5>
+                        <div class="timeline__text">
+                            <p>I learned so far:<br>HTML, CSS, JavaScript, LESS, React</p>                        </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="timeline__col timeline__col--right">
+                    <h4 class="timeline__title">Education</h4>
+
+                    <div class="timeline__item">
+                        <time class="timeline__date">1998 - <b>2007</b></time>
+                        <h5 class="timeline__subtitle">Tallinna Õismäe Vene Lütseum</h5>
+                        <div class="timeline__position">Primary-Secondary School</div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <time class="timeline__date">2007 - <b>2010</b></time>
+                        <h5 class="timeline__subtitle">Tallinn European School</h5>
+                        <div class="timeline__position">Mechanical Degree</div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <time class="timeline__date">2020 - <b>Present</b></time>
+                        <h5 class="timeline__subtitle">Hive Helsinki</h5>
+                        <div class="timeline__position">Computer Programming</div>
+                    </div>
+
+                    <h4 class="timeline__title">Skills</h4>
+                    <div class="progress-bar">
+                        <div class="progress-bar__item">
+                        <div class="progress-bar__left">
+                            <div class="progress-bar__title">C Language</div>
+                        </div>
+                        <div class="progress-bar__right">
+                            <div class="progress-bar__bar">
+                                <div class="progress-bar__progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="progress-bar__item">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">UI/UX Design</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar__item">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">HTML</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar__item">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">CSS</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar__item">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">JavaScript</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar__item">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">Git</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar__item">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">React</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+<!--/Timeline__col-->
+            </div>
+<!--/Timeline-->
+            <div class="text-center">
+                <a class="btn" href="#" data-modal="#modal_contact">Hire me</a>
+            </div>
+        </div>
+<!--/Modal__content-->
+    </div>
+<!--/Modal__dialog-->
+</div>
+<!--/Modal_resume-->
+
+<div class="modal" id="modal_contact">
+    <div class="modal__dialog  modal__dialog--sm">
+
+        <button class="modal__close" type="button" data-close>
+            <img src="images/cancel.svg" alt="Close">
+        </button>
+
+            <div class="contact">
+                <div class="contact__left">
+                    <h3 class="modal__title  mb-0">Contact</h3>
+                    <h4 class="modal__subtitle">Call me or send me a request</h4>
+                    <ul class="contact__info">
+                        <li class="contact__info-item"><img class="contact__info-icon" src="images/phone-call.svg" height="20" alt="phone-number">
+                            +358 452 512 905</li>
+                        <li class="contact__info-item"><img class="contact__info-icon" src="images/email.svg" height="20" alt="email">
+                            dmitrivlassenko@gmail.com</li>
+                    </ul>
+
+                    <form class="form" target="_top" action="mailto:dmitrivlassenko@gmail.com" method="post">
+                        <div class="form__group">
+                            <label class="form__label" for="input-email">Your e-mail</label>
+                            <input class="form__input" name="input-email" type="text" id="input-email">
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="input-text">Message</label>
+                            <textarea class="form__textarea" name="input-text" id="input-text"></textarea>
+                        </div>
+
+                        <div class="text-right">
+                        <button class="btn" type="submit">SEND</button>
+                        </div>
+                    </form>
+
+                </div>
+<!--                /Contact__left-->
+            </div>
+<!--        /Contact-->
+
+    </div>
+        <!--/Modal__dialog-->
+</div>
+<!--Modal contact-->
+</div>
+<!--works-->
+
+<!--JS-->
+
+<script src="JS/lightbox.min.js"></script>
+<script src="JS/app.js"></script>
+
+<script>
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'fadeDuration': 300,
+        'imageFadeDuration': 100,
+    })
+</script>
+
+</body>
+</html>
